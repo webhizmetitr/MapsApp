@@ -1,14 +1,23 @@
-﻿MapsApp — Windows x64
+﻿MapsApp 2.0 — Windows x64
 
-1. MapsApp.exe dosyasını çift tıklayarak açın. Python kurulumu gerekmez.
-2. Google Places API (New) etkin ve faturalandırması açık projenizin API anahtarını girin.
-3. Ülke, şehir/ilçe ve sektör girip İşletmeleri ara düğmesine basın.
-4. Sonuçları haritada açabilir veya CSV olarak kaydedebilirsiniz.
+1. MapsApp.exe dosyasını açın; Python kurulumu gerekmez.
+2. Google Places API (New) anahtarınızı girin.
+3. Açılır menüden il seçin. İlçe listesi otomatik güncellenir.
+4. Tek ilçe seçin veya ilin tamamını taramak için Tüm ilçeler seçin.
+5. Sektör girin. Ekrandaki en fazla API isteği sayısını kontrol ederek taramayı başlatın.
+6. Sonuçlar geldikçe listelenir; CSV olarak kaydedilebilir.
 
-API kullanımı ücretli olabilir. Anahtar uygulamaya gömülü değildir ve diske kaydedilmez.
-Web sitesi bilgisi Google kaydına dayanır; sitenin kesinlikle olmadığı anlamına gelmez.
+81 il ve 973 ilçe çevrimdışı olarak dahildir. Google'ın sunduğu sayfalar her ilçede
+otomatik taranır; tekrarlanan işletmeler tekilleştirilir. Durdurma veya API/kota
+hatasında alınan sonuçlar korunur.
+
+Google her ilçe/sektör sorgusunda en fazla 60 sonuç sunar. Tüm ilçeleri ayrı
+taramak kapsamı artırır ama tüm işletmelerin eksiksiz listesini garanti etmez.
+Google kaydında web sitesi bilgisinin olmaması, internette hiç sitesi olmadığı
+anlamına gelmez. API faturalandırması açık olmalıdır ve istekler ücretli olabilir.
+İstanbul'da Tüm ilçeler seçimi en fazla 117 API isteği oluşturur.
+
+18 birim testi, örnek verili il/ilçe-arayüz-CSV-harita kontrolleri ve gerçek
+paketlenmiş EXE'nin açılıp normal kapanması Wine altında doğrulandı. Gerçek
+API anahtarıyla arama test edilmedi. EXE dijital imzalı değildir.
 Google Maps Platform koşulları veri kullanımı ve saklama için geçerlidir.
-
-Doğrulama: Wine altında 11 test, örnek verili arayüz/CSV/harita kontrolleri ve
-paketlenmiş EXE'nin açılıp normal kapanması başarılı. Gerçek Windows bilgisayarda
-ve gerçek API anahtarıyla arama henüz test edilmedi. EXE dijital imzalı değildir.
